@@ -1,7 +1,7 @@
 Summary:        Xamarin theme engine and themes for GTK+ 2.0
 Name:           xamarin-gtk-theme
 Version:        0.2017.05.24.11.51
-Release:	0.xamarin.0
+Release:	0.xamarin.1
 # for details on which engines are GPL vs LGPL, see COPYING
 License:        LGPLv2+
 Group:          System Environment/Libraries
