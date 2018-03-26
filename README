@@ -1,0 +1,9 @@
+OSX alike theme for GTK+ 2, based on the murrine codebase
+
+Do the normal dance to install:
+
+	(./autogen.sh ; ) ./configure (generally --prefix=/usr); make ; make install
+
+To uninstall:
+	
+	make uninstall
