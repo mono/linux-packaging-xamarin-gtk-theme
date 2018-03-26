@@ -4,11 +4,12 @@ Priority: optional
 Maintainer: Jo Shields <joshield@microsoft.com>
 Build-Depends: debhelper (>= 9~),
                intltool,
+               libtool,
                libgtk2.0-dev (>= 2.10.1)
 Standards-Version: 3.9.8
 Homepage: https://github.com/mono/xamarin-gtk-theme
 Vcs-Git: https://github.com/mono/linux-packaging-xamarin-gtk-theme.git
-Vcs-Browser: https:////github.com/mono/linux-packaging-xamarin-gtk-theme
+Vcs-Browser: https://github.com/mono/linux-packaging-xamarin-gtk-theme
 
 Package: xamarin-gtk-theme
 Architecture: any
