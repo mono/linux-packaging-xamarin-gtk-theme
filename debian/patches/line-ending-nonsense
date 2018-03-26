@@ -1,0 +1,344 @@
+Description: <short summary of the patch>
+ TODO: Put a short summary on the line above and replace this paragraph
+ with a longer explanation of this change. Complete the meta-information
+ with other relevant fields (see below for details). To make it easier, the
+ information below has been extracted from the changelog. Adjust it or drop
+ it.
+ .
+ xamarin-gtk-theme (0.2017.05.24.11.51-1) unstable; urgency=medium
+ .
+   * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+Author: Jo Shields <directhex@unknown>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: https://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: 2018-03-26
+
+--- xamarin-gtk-theme-0.2017.05.24.11.51.orig/build/win32/vs12/libxamarin.sln
++++ xamarin-gtk-theme-0.2017.05.24.11.51/build/win32/vs12/libxamarin.sln
+@@ -1,22 +1,22 @@
+-﻿
+-Microsoft Visual Studio Solution File, Format Version 12.00
+-# Visual Studio 2013
+-VisualStudioVersion = 12.0.40629.0
+-MinimumVisualStudioVersion = 10.0.40219.1
+-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libxamarin", "libxamarin.vcxproj", "{6305DFC6-9458-418F-9DC4-49B16228A558}"
+-EndProject
+-Global
+-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+-		Debug|Win32 = Debug|Win32
+-		Release|Win32 = Release|Win32
+-	EndGlobalSection
+-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+-		{6305DFC6-9458-418F-9DC4-49B16228A558}.Debug|Win32.ActiveCfg = Debug|Win32
+-		{6305DFC6-9458-418F-9DC4-49B16228A558}.Debug|Win32.Build.0 = Debug|Win32
+-		{6305DFC6-9458-418F-9DC4-49B16228A558}.Release|Win32.ActiveCfg = Release|Win32
+-		{6305DFC6-9458-418F-9DC4-49B16228A558}.Release|Win32.Build.0 = Release|Win32
+-	EndGlobalSection
+-	GlobalSection(SolutionProperties) = preSolution
+-		HideSolutionNode = FALSE
+-	EndGlobalSection
+-EndGlobal
++﻿
++Microsoft Visual Studio Solution File, Format Version 12.00
++# Visual Studio 2013
++VisualStudioVersion = 12.0.40629.0
++MinimumVisualStudioVersion = 10.0.40219.1
++Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libxamarin", "libxamarin.vcxproj", "{6305DFC6-9458-418F-9DC4-49B16228A558}"
++EndProject
++Global
++	GlobalSection(SolutionConfigurationPlatforms) = preSolution
++		Debug|Win32 = Debug|Win32
++		Release|Win32 = Release|Win32
++	EndGlobalSection
++	GlobalSection(ProjectConfigurationPlatforms) = postSolution
++		{6305DFC6-9458-418F-9DC4-49B16228A558}.Debug|Win32.ActiveCfg = Debug|Win32
++		{6305DFC6-9458-418F-9DC4-49B16228A558}.Debug|Win32.Build.0 = Debug|Win32
++		{6305DFC6-9458-418F-9DC4-49B16228A558}.Release|Win32.ActiveCfg = Release|Win32
++		{6305DFC6-9458-418F-9DC4-49B16228A558}.Release|Win32.Build.0 = Release|Win32
++	EndGlobalSection
++	GlobalSection(SolutionProperties) = preSolution
++		HideSolutionNode = FALSE
++	EndGlobalSection
++EndGlobal
+--- xamarin-gtk-theme-0.2017.05.24.11.51.orig/build/win32/vs12/libxamarin.vcxproj
++++ xamarin-gtk-theme-0.2017.05.24.11.51/build/win32/vs12/libxamarin.vcxproj
+@@ -1,116 +1,116 @@
+-﻿<?xml version="1.0" encoding="utf-8"?>
+-<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+-  <ItemGroup Label="ProjectConfigurations">
+-    <ProjectConfiguration Include="Debug|Win32">
+-      <Configuration>Debug</Configuration>
+-      <Platform>Win32</Platform>
+-    </ProjectConfiguration>
+-    <ProjectConfiguration Include="Release|Win32">
+-      <Configuration>Release</Configuration>
+-      <Platform>Win32</Platform>
+-    </ProjectConfiguration>
+-  </ItemGroup>
+-  <PropertyGroup Label="Globals">
+-    <ProjectGuid>{6305DFC6-9458-418F-9DC4-49B16228A558}</ProjectGuid>
+-    <Keyword>Win32Proj</Keyword>
+-    <RootNamespace>libxamarin</RootNamespace>
+-  </PropertyGroup>
+-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+-    <UseDebugLibraries>true</UseDebugLibraries>
+-    <PlatformToolset>v120</PlatformToolset>
+-    <CharacterSet>MultiByte</CharacterSet>
+-  </PropertyGroup>
+-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+-    <UseDebugLibraries>false</UseDebugLibraries>
+-    <PlatformToolset>v120</PlatformToolset>
+-    <WholeProgramOptimization>true</WholeProgramOptimization>
+-    <CharacterSet>MultiByte</CharacterSet>
+-  </PropertyGroup>
+-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+-  <ImportGroup Label="ExtensionSettings">
+-  </ImportGroup>
+-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+-    <Import Project="libxamarin-build-defines.props" />
+-  </ImportGroup>
+-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+-    <Import Project="libxamarin-build-defines.props" />
+-  </ImportGroup>
+-  <PropertyGroup Label="UserMacros" />
+-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+-    <LinkIncremental>true</LinkIncremental>
+-  </PropertyGroup>
+-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+-    <LinkIncremental>false</LinkIncremental>
+-  </PropertyGroup>
+-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+-    <ClCompile>
+-      <MinimalRebuild>true</MinimalRebuild>
+-      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+-      <PrecompiledHeader>
+-      </PrecompiledHeader>
+-      <WarningLevel>Level3</WarningLevel>
+-      <PreprocessorDefinitions>DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+-      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+-    </ClCompile>
+-    <Link>
+-	  <GenerateDebugInformation>true</GenerateDebugInformation>
+-      <SubSystem>Windows</SubSystem>
+-      <TargetMachine>MachineX86</TargetMachine>
+-    </Link>
+-  </ItemDefinitionGroup>
+-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+-    <ClCompile>
+-      <WarningLevel>Level3</WarningLevel>
+-      <Optimization>MaxSpeed</Optimization>
+-      <FunctionLevelLinking>true</FunctionLevelLinking>
+-      <IntrinsicFunctions>true</IntrinsicFunctions>
+-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+-    </ClCompile>
+-    <Link>
+-	  <SubSystem>Windows</SubSystem>
+-      <GenerateDebugInformation>true</GenerateDebugInformation>
+-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+-      <OptimizeReferences>true</OptimizeReferences>
+-      <TargetMachine>MachineX86</TargetMachine>
+-    </Link>
+-  </ItemDefinitionGroup>
+-  <ItemGroup>
+-    <ClInclude Include="..\..\..\src\animation.h" />
+-    <ClInclude Include="..\..\..\src\cairo-support.h" />
+-    <ClInclude Include="..\..\..\src\config.h" />
+-    <ClInclude Include="..\..\..\src\exponential-blur.h" />
+-    <ClInclude Include="..\..\..\src\gaussian-blur.h" />
+-    <ClInclude Include="..\..\..\src\murrine_draw.h" />
+-    <ClInclude Include="..\..\..\src\murrine_draw_rgba.h" />
+-    <ClInclude Include="..\..\..\src\murrine_rc_style.h" />
+-    <ClInclude Include="..\..\..\src\murrine_style.h" />
+-    <ClInclude Include="..\..\..\src\murrine_types.h" />
+-    <ClInclude Include="..\..\..\src\raico-blur.h" />
+-    <ClInclude Include="..\..\..\src\stack-blur.h" />
+-    <ClInclude Include="..\..\..\src\support.h" />
+-  </ItemGroup>
+-  <ItemGroup>
+-    <ClCompile Include="..\..\..\src\animation.c" />
+-    <ClCompile Include="..\..\..\src\cairo-support.c" />
+-    <ClCompile Include="..\..\..\src\exponential-blur.c" />
+-    <ClCompile Include="..\..\..\src\gaussian-blur.c" />
+-    <ClCompile Include="..\..\..\src\murrine_draw.c" />
+-    <ClCompile Include="..\..\..\src\murrine_draw_rgba.c" />
+-    <ClCompile Include="..\..\..\src\murrine_rc_style.c" />
+-    <ClCompile Include="..\..\..\src\murrine_style.c" />
+-    <ClCompile Include="..\..\..\src\murrine_theme_main.c" />
+-    <ClCompile Include="..\..\..\src\raico-blur.c" />
+-    <ClCompile Include="..\..\..\src\stack-blur.c" />
+-    <ClCompile Include="..\..\..\src\support.c" />
+-  </ItemGroup>
+-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+-  <ImportGroup Label="ExtensionTargets">
+-  </ImportGroup>
++﻿<?xml version="1.0" encoding="utf-8"?>
++<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
++  <ItemGroup Label="ProjectConfigurations">
++    <ProjectConfiguration Include="Debug|Win32">
++      <Configuration>Debug</Configuration>
++      <Platform>Win32</Platform>
++    </ProjectConfiguration>
++    <ProjectConfiguration Include="Release|Win32">
++      <Configuration>Release</Configuration>
++      <Platform>Win32</Platform>
++    </ProjectConfiguration>
++  </ItemGroup>
++  <PropertyGroup Label="Globals">
++    <ProjectGuid>{6305DFC6-9458-418F-9DC4-49B16228A558}</ProjectGuid>
++    <Keyword>Win32Proj</Keyword>
++    <RootNamespace>libxamarin</RootNamespace>
++  </PropertyGroup>
++  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
++  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
++    <ConfigurationType>DynamicLibrary</ConfigurationType>
++    <UseDebugLibraries>true</UseDebugLibraries>
++    <PlatformToolset>v120</PlatformToolset>
++    <CharacterSet>MultiByte</CharacterSet>
++  </PropertyGroup>
++  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
++    <ConfigurationType>DynamicLibrary</ConfigurationType>
++    <UseDebugLibraries>false</UseDebugLibraries>
++    <PlatformToolset>v120</PlatformToolset>
++    <WholeProgramOptimization>true</WholeProgramOptimization>
++    <CharacterSet>MultiByte</CharacterSet>
++  </PropertyGroup>
++  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
++  <ImportGroup Label="ExtensionSettings">
++  </ImportGroup>
++  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
++    <Import Project="libxamarin-build-defines.props" />
++  </ImportGroup>
++  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
++    <Import Project="libxamarin-build-defines.props" />
++  </ImportGroup>
++  <PropertyGroup Label="UserMacros" />
++  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++    <LinkIncremental>true</LinkIncremental>
++  </PropertyGroup>
++  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++    <LinkIncremental>false</LinkIncremental>
++  </PropertyGroup>
++  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
++    <ClCompile>
++      <MinimalRebuild>true</MinimalRebuild>
++      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
++      <PrecompiledHeader>
++      </PrecompiledHeader>
++      <WarningLevel>Level3</WarningLevel>
++      <PreprocessorDefinitions>DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
++      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
++      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
++    </ClCompile>
++    <Link>
++	  <GenerateDebugInformation>true</GenerateDebugInformation>
++      <SubSystem>Windows</SubSystem>
++      <TargetMachine>MachineX86</TargetMachine>
++    </Link>
++  </ItemDefinitionGroup>
++  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++    <ClCompile>
++      <WarningLevel>Level3</WarningLevel>
++      <Optimization>MaxSpeed</Optimization>
++      <FunctionLevelLinking>true</FunctionLevelLinking>
++      <IntrinsicFunctions>true</IntrinsicFunctions>
++      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
++      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
++    </ClCompile>
++    <Link>
++	  <SubSystem>Windows</SubSystem>
++      <GenerateDebugInformation>true</GenerateDebugInformation>
++      <EnableCOMDATFolding>true</EnableCOMDATFolding>
++      <OptimizeReferences>true</OptimizeReferences>
++      <TargetMachine>MachineX86</TargetMachine>
++    </Link>
++  </ItemDefinitionGroup>
++  <ItemGroup>
++    <ClInclude Include="..\..\..\src\animation.h" />
++    <ClInclude Include="..\..\..\src\cairo-support.h" />
++    <ClInclude Include="..\..\..\src\config.h" />
++    <ClInclude Include="..\..\..\src\exponential-blur.h" />
++    <ClInclude Include="..\..\..\src\gaussian-blur.h" />
++    <ClInclude Include="..\..\..\src\murrine_draw.h" />
++    <ClInclude Include="..\..\..\src\murrine_draw_rgba.h" />
++    <ClInclude Include="..\..\..\src\murrine_rc_style.h" />
++    <ClInclude Include="..\..\..\src\murrine_style.h" />
++    <ClInclude Include="..\..\..\src\murrine_types.h" />
++    <ClInclude Include="..\..\..\src\raico-blur.h" />
++    <ClInclude Include="..\..\..\src\stack-blur.h" />
++    <ClInclude Include="..\..\..\src\support.h" />
++  </ItemGroup>
++  <ItemGroup>
++    <ClCompile Include="..\..\..\src\animation.c" />
++    <ClCompile Include="..\..\..\src\cairo-support.c" />
++    <ClCompile Include="..\..\..\src\exponential-blur.c" />
++    <ClCompile Include="..\..\..\src\gaussian-blur.c" />
++    <ClCompile Include="..\..\..\src\murrine_draw.c" />
++    <ClCompile Include="..\..\..\src\murrine_draw_rgba.c" />
++    <ClCompile Include="..\..\..\src\murrine_rc_style.c" />
++    <ClCompile Include="..\..\..\src\murrine_style.c" />
++    <ClCompile Include="..\..\..\src\murrine_theme_main.c" />
++    <ClCompile Include="..\..\..\src\raico-blur.c" />
++    <ClCompile Include="..\..\..\src\stack-blur.c" />
++    <ClCompile Include="..\..\..\src\support.c" />
++  </ItemGroup>
++  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
++  <ImportGroup Label="ExtensionTargets">
++  </ImportGroup>
+ </Project>
+\ No newline at end of file
+--- xamarin-gtk-theme-0.2017.05.24.11.51.orig/build/win32/vs12/libxamarin.vcxproj.filters
++++ xamarin-gtk-theme-0.2017.05.24.11.51/build/win32/vs12/libxamarin.vcxproj.filters
+@@ -1,17 +1,17 @@
+-﻿<?xml version="1.0" encoding="utf-8"?>
+-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+-  <ItemGroup>
+-    <Filter Include="Source Files">
+-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+-    </Filter>
+-    <Filter Include="Header Files">
+-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+-    </Filter>
+-    <Filter Include="Resource Files">
+-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+-    </Filter>
+-  </ItemGroup>
++﻿<?xml version="1.0" encoding="utf-8"?>
++<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
++  <ItemGroup>
++    <Filter Include="Source Files">
++      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
++      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
++    </Filter>
++    <Filter Include="Header Files">
++      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
++      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
++    </Filter>
++    <Filter Include="Resource Files">
++      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
++      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
++    </Filter>
++  </ItemGroup>
+ </Project>
+\ No newline at end of file

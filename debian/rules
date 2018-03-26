@@ -1,0 +1,13 @@
+#!/usr/bin/make -f
+
+override_dh_auto_configure:
+	./autogen.sh --prefix=/usr
+
+override_dh_install:
+	dh_install
+	mkdir -p debian/xamarin-gtk-theme/usr/share/themes/Xamarin-Dark/gtk-2.0/
+	cp debian/gtkrc-dark debian/xamarin-gtk-theme/usr/share/themes/Xamarin-Dark/gtk-2.0/gtkrc
+	rm -f debian/xamarin-gtk-theme/usr/lib/gtk-2.0/2.10.0/engines/libxamarin.la
+
+%:
+	dh $@

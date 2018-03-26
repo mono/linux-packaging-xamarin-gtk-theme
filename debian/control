@@ -1,0 +1,18 @@
+Source: xamarin-gtk-theme
+Section: x11
+Priority: optional
+Maintainer: Jo Shields <joshield@microsoft.com>
+Build-Depends: debhelper (>= 9~),
+               intltool,
+               libgtk2.0-dev (>= 2.10.1)
+Standards-Version: 3.9.8
+Homepage: https://github.com/mono/xamarin-gtk-theme
+Vcs-Git: https://github.com/mono/linux-packaging-xamarin-gtk-theme.git
+Vcs-Browser: https:////github.com/mono/linux-packaging-xamarin-gtk-theme
+
+Package: xamarin-gtk-theme
+Architecture: any
+Depends: libgtk2.0-0 (>= 2.24.5-4), ${misc:Depends}, ${shlibs:Depends}
+Description: Xamarin gtk+-2.0 theme engine and themes
+ This package contains Xamarin Gtk+ themes, for an enhanced
+ look and feel in the MonoDevelop IDE
