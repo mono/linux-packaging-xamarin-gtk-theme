@@ -7,6 +7,7 @@ License:        LGPLv2+
 Group:          System Environment/Libraries
 Source:         %{name}-%{version}.tar.gz
 Source1:        gtkrc-dark.patch
+Patch0:		automake-1.16.patch
 BuildRequires:  gtk2-devel
 BuildRequires:  intltool
 BuildRequires:  gettext
@@ -22,6 +23,7 @@ Package with Xamarin Gtk+2 themes, for better look inside MonoDevelop
 
 %prep
 %setup -q -n xamarin-gtk-theme-master
+%patch0 -p1
 
 %build
 ./autogen.sh
