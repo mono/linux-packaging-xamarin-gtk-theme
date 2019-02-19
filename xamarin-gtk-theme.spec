@@ -15,6 +15,7 @@ BuildRequires:  pkgconfig
 URL:           	https://github.com/mono/xamarin-gtk-theme
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
+%define debug_package %{nil}
 
 %description
 Package with Xamarin Gtk+2 themes, for better look inside MonoDevelop
