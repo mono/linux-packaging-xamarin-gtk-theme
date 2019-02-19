@@ -43,7 +43,7 @@ find $RPM_BUILD_ROOT%{_libdir} -name "*.la" | xargs rm
 # sanitize permissions
 find $RPM_BUILD_ROOT%{_datadir}/themes -type d -exec chmod 755 {} \;
 find $RPM_BUILD_ROOT%{_datadir}/themes -type f -name "*.png" -exec chmod 644 {} \;
-find $RPM_BUILD_ROOT%{_datadir}/themes -name "gtkrc*" -perm +111 -exec chmod 644 {} \;
+find $RPM_BUILD_ROOT%{_datadir}/themes -name "gtkrc*" -perm /111 -exec chmod 644 {} \;
 
 %clean
 rm -rf $RPM_BUILD_ROOT
